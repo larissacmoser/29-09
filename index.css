@@ -1,0 +1,58 @@
+.container {
+  background-color: bisque;
+  width: 700px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+}
+
+.square {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  /* animation: pushSquare 7s infinite; */
+  animation: moveSquares 3s infinite;
+}
+
+.delay {
+  animation-delay: 1s;
+}
+
+@keyframes pushSquare {
+  0% {
+    left: 0px;
+  }
+  33% {
+    left: 600px;
+    background-color: red;
+  }
+  100% {
+    left: 0px;
+    background-color: blue;
+  }
+}
+@keyframes moveSquares {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  25% {
+    left: 400px;
+    top: 0px;
+  }
+  50% {
+    top: 400px;
+    left: 400px;
+  }
+  75% {
+    left: 0px;
+    top: 400px;
+  }
+
+  100% {
+    top: 0px;
+    left: 0px;
+    background-color: blueviolet;
+  }
+}
